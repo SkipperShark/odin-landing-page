@@ -40,7 +40,6 @@ ul {
 
 .headerLogo {
     font-size: 24px;
-    color: var(--primaryTextColor);
     margin-right: auto;
 }
 
@@ -63,17 +62,33 @@ ul {
 .infoHeader {
     font-size: 36px;
     font-weight: bolder;
+    text-align: center;
 }
 
 .infoCards {
     display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.infoCard {
+    flex: 0 0 100px
 }
 
 .infoImg {
     display: block;
+    width: 100px;
+    height: 100px;
+    object-fit: fill;
+
+    border: 3px solid var(--blue);
+    border-radius: 0.5rem;
 }
 
-.infoDesc {}
+.infoDesc {
+    color: black;
+    text-align: center;
+}
 
 /* ****************************** */
 
