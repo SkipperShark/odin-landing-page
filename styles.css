@@ -1,5 +1,5 @@
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Roboto';
 
     display: flex;
     flex-direction: column;
@@ -14,6 +14,23 @@ body {
     --blue: #3882F6;
     --secondaryTextColor: #E5E7EB;
     --primaryTextColor: #F9FAF8;
+    --borderRadius: 0.5rem;
+    --bodyHorizontalSpacing: 4rem;
+    --bodyVerticalSpacing: 2rem;
+
+    /* todo, get the light italic thing to work, not surewhy the lighter than normal font weight isnt working  */
+    /* todo, to solve the problem of the image resizing itself to 100% width and height, make the height of the image the height of the container */
+}
+
+.body {
+    flex-grow: 1;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.body>* {
+    padding: 50px 100px;
 }
 
 ul {
@@ -28,13 +45,16 @@ ul {
     color: white;
 }
 
+.header {
+    padding: 10px 100px;
+}
+
 .header ul {
     display: flex;
     align-items: center;
 
     color: #E5E7EB;
     font-size: 18px;
-    padding: 0.5rem;
     gap: 1rem;
 }
 
@@ -43,12 +63,6 @@ ul {
     margin-right: auto;
 }
 
-.body {
-    flex-grow: 1;
-
-    display: flex;
-    flex-direction: column;
-}
 
 .footer {
     display: flex;
@@ -59,16 +73,73 @@ ul {
 
 /* ****************************** */
 
+.hero {
+    background-color: var(--navyBlue);
+}
+
+.heroContainer {
+    display: flex;
+}
+
+.heroContent {
+    flex: 1 1 0;
+}
+
+.heroMainText {
+    font-size: 48px;
+    font-weight: bolder;
+    color: var(--primaryTextColor);
+}
+
+.heroSecondaryText {
+    font-size: 18px;
+    color: var(--secondaryTextColor);
+}
+
+.heroSignUpButton {
+    background-color: var(--blue);
+    border: 1px transparent solid;
+    border-radius: var(--borderRadius);
+    color: var(--primaryTextColor);
+    padding: 0.5rem 1.5rem;
+}
+
+.heroImageContainer {
+    flex: 1 1 0;
+    border: 1px green solid;
+
+}
+
+.heroImageContainer img {
+    background-color: rgba(169, 169, 169, 0.665);
+    color: white;
+    height: auto;
+    width: 300px;
+}
+
+
+/* ****************************** */
+
+.info {
+    flex-grow: 1;
+}
+
+.infoContainer {
+    padding: 0 var(--bodyVerticalSpacing);
+}
+
 .infoHeader {
     font-size: 36px;
     font-weight: bolder;
     text-align: center;
+
+    margin-bottom: 50px;
 }
 
 .infoCards {
     display: flex;
     justify-content: center;
-    gap: 2rem;
+    gap: var(--bodyHorizontalSpacing);
 }
 
 .infoCard {
@@ -77,12 +148,12 @@ ul {
 
 .infoImg {
     display: block;
-    width: 100px;
-    height: 100px;
+    width: 200px;
+    height: 200px;
     object-fit: fill;
 
     border: 3px solid var(--blue);
-    border-radius: 0.5rem;
+    border-radius: var(--borderRadius);
 }
 
 .infoDesc {
@@ -94,6 +165,12 @@ ul {
 
 .quote {
     background-color: var(--lightGrey);
+    flex-grow: 1;
+
+}
+
+.quoteContainer {
+    padding: 0 var(--bodyHorizontalSpacing);
 }
 
 .quoteText {
@@ -112,14 +189,24 @@ ul {
 /* ****************************** */
 
 .signUp {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.signUpContainer {
+    flex: 1 0 auto;
     display: flex;
     justify-content: space-between;
+    align-items: flex-end;
 
-    padding: 1rem;
+    padding: var(--bodyVerticalSpacing) var(--bodyHorizontalSpacing);
+    border: 1px transparent solid;
+    border-radius: var(--borderRadius);
 
     background-color: var(--blue);
     color: white;
-
 }
 
 .callToAction {
@@ -133,9 +220,9 @@ ul {
 .signUp input[type=button] {
     background-color: transparent;
     border: 1px white solid;
-    border-radius: 0.5rem;
+    border-radius: var(--borderRadius);
     color: var(--secondaryTextColor);
-    flex: 0 1 100px;
+    padding: 0.5rem 1.5rem;
 }
 
 /* ****************************** */
